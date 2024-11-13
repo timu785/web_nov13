@@ -1,0 +1,30 @@
+table, td, th {
+    border:1px solid gray;
+    border-collapse: collapse;   /* cellák közti rések eltüntetése */
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border:20px dotted black;
+}
+
+th {
+    background-color: brown;
+    color:beige;
+}
+
+tr:nth-child(odd) {
+    color:red
+}
+
+.osszevont {
+    background-color: greenyellow;
+}
+
+.reszponzivtablazat {
+    width:100%;
+    overflow-x: scroll;
+}
+
+
