@@ -2,7 +2,110 @@
     itt készitsd el a táblán látható mintának
     megfelelően az oldalt.
 
-    
+    töréspont. 700px-nél, a nacigáció article
+    fölé kerüljön és az aside az article alá
 
+    a menüpontok ne legyenek aláhúzva, ne legyen
+    felsorolás, ha flé viszem az egeret, akkor 
+    változzon a házzérszíne (li)
 
+    hozzd létre azokat az html-ket, amiket a
+    menüben leírtunk és készítsd el a mintának
+    megfelelő táblázatot az article tagbe! új
+    táblázatformázás cs kell bele, de ugyanez
+    az oldalalakítás.css
 */
+header, nav, article, aside, footer{
+    border: 1px solid black;
+}
+
+article{
+    color:rgb(92, 23, 23);
+    border: 10px dotted rgb(92, 23, 23);
+}
+
+.kutyas_tablazat tbody tr:nth-child(odd) {
+    background-color: rgb(231, 231, 161);
+}
+
+tr {
+    border:1px solid black;
+}
+
+nav ul{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li a{
+    text-decoration: none;
+}
+nav ul li a:hover{
+    background-color: rgb(214, 192, 235);
+}
+
+.sakktabla td{
+    height:50px;
+    width:50px;
+    background-color: black;
+}
+
+.sakktabla tr:nth-child(odd) td:nth-child(odd){
+    background-color: white;
+}
+.sakktabla tr:nth-child(even) td:nth-child(even){
+    background-color: white;
+}
+
+.sakktabla th{
+    height:50px;
+    width:50px;
+    background-color: grey;
+}
+
+header{
+    grid-area:he;
+}
+nav{
+    grid-area:na;
+}
+article{
+    grid-area:ar;
+}
+aside{
+    grid-area:as;
+}
+footer{
+    grid-area:fo;
+}
+
+main{
+    display:grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    grid-template-areas:
+    "he he he"
+    "na ar as"
+    "fo fo fo";
+}
+
+
+
+@media (max-width: 700px) {
+    main{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "he"
+        "na"
+        "ar"
+        "as"
+        "fo";
+    }
+}
+
+
+
+
+
+
+
